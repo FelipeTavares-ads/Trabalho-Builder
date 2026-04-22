@@ -33,5 +33,9 @@ public class Main {
         System.out.println("CÓDIGO DE BARRAS:");
         System.out.println(meuBoleto.getCodigoDeBarras());
         System.out.println("=================================================");
+
+        GeradorBoletoPDF geradorPDF = new GeradorBoletoPDF();
+        geradorPDF.exportar(meuBoleto, "boleto1.pdf");
+
     }
 }
