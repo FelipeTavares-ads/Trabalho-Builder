@@ -7,6 +7,12 @@ public class BradescoBoletoBuilder implements BoletoBuilder {
     private String cedente;
     private int nossoNumero;
     private String banco;
+    private String conta;
+    private String carteira;
+    private String linhaDigitavel;
+    private String agencia;
+    private String logotipo;
+    private String codigoDeBarras;
 
     public void buildSacado(String sacado) {
         this.sacado = sacado;
@@ -43,7 +49,27 @@ public class BradescoBoletoBuilder implements BoletoBuilder {
         this.banco = banco;
     }
 
+    public void buildDadosBancarios(String agencia, String conta, String carteira){
+        this.agencia = agencia;
+        this.conta = conta;
+        this.carteira = carteira;
+    }
+
+
+    public void buildLinhaDigitavel(String linhaDigitavel){
+        this.linhaDigitavel = linhaDigitavel;
+    }
+
+
+    public void buildLogotipo(String logotipo){
+        this.logotipo = logotipo;
+    }
+
+    public void buildCodigoDeBarras(String codigoDeBarras){
+        this.codigoDeBarras = codigoDeBarras;
+    }
+
     public Boleto getBoleto(){
-        return new BoletoPadrao(sacado, valor, vencimento, cedente, nossoNumero, "237 - Bradesco");
+        return new BoletoPadrao(sacado, valor, vencimento, cedente, nossoNumero, "237 - Bradesco", conta, carteira, agencia, logotipo, linhaDigitavel,codigoDeBarras);
     }
 }

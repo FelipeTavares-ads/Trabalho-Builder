@@ -7,4 +7,10 @@ public interface Boleto {
     String getCedente();
     int getNossoNumero();
     String getBanco();
+    String getCodigoDeBarras();
+    String getLinhaDigitavel();
+    String getLogotipo();
+    String getAgencia();
+    String getConta();
+    String getCarteira();
 }
